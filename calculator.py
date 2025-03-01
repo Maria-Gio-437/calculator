@@ -28,39 +28,45 @@ class CalculadoraGUI:
         self.calculadora = Calculadora()
         self.janela = tk.Tk()
         self.janela.title("Calculadora Simples")
+        self.janela.configure(bg="#C7B8EA")  # Lilás
 
         # Criando campos para entrada dos números
-        self.label_num1 = tk.Label(self.janela, text="Número 1:")
+        self.label_num1 = tk.Label(self.janela, text="Número 1:", bg="#C7B8EA")
         self.label_num1.grid(row=0, column=0, padx=5, pady=5)
         self.entry_num1 = tk.Entry(self.janela, width=20)
         self.entry_num1.grid(row=0, column=1, padx=5, pady=5)
 
-        self.label_num2 = tk.Label(self.janela, text="Número 2:")
+        self.label_num2 = tk.Label(self.janela, text="Número 2:", bg="#C7B8EA")
         self.label_num2.grid(row=1, column=0, padx=5, pady=5)
         self.entry_num2 = tk.Entry(self.janela, width=20)
         self.entry_num2.grid(row=1, column=1, padx=5, pady=5)
 
         # Criando botões para as operações
-        self.botao_soma = tk.Button(self.janela, text="+", command=self.somar)
+        self.botao_soma = tk.Button(self.janela, text="+", command=self.somar, 
+                                    bg="#7A288A", fg="white", width=5, height=2)
         self.botao_soma.grid(row=2, column=0, padx=5, pady=5)
 
-        self.botao_subtracao = tk.Button(self.janela, text="-", command=self.subtrair)
+        self.botao_subtracao = tk.Button(self.janela, text="-", command=self.subtrair, 
+                                         bg="#7A288A", fg="white", width=5, height=2)
         self.botao_subtracao.grid(row=2, column=1, padx=5, pady=5)
 
-        self.botao_multiplicacao = tk.Button(self.janela, text="*", command=self.multiplicar)
+        self.botao_multiplicacao = tk.Button(self.janela, text="*", command=self.multiplicar, 
+                                            bg="#7A288A", fg="white", width=5, height=2)
         self.botao_multiplicacao.grid(row=3, column=0, padx=5, pady=5)
 
-        self.botao_divisao = tk.Button(self.janela, text="/", command=self.dividir)
+        self.botao_divisao = tk.Button(self.janela, text="/", command=self.dividir, 
+                                       bg="#7A288A", fg="white", width=5, height=2)
         self.botao_divisao.grid(row=3, column=1, padx=5, pady=5)
 
         # Campo para exibir o resultado
-        self.label_resultado = tk.Label(self.janela, text="Resultado:")
+        self.label_resultado = tk.Label(self.janela, text="Resultado:", bg="#C7B8EA")
         self.label_resultado.grid(row=4, column=0, padx=5, pady=5)
-        self.resultado = tk.Label(self.janela, text="")
+        self.resultado = tk.Label(self.janela, text="", bg="#C7B8EA")
         self.resultado.grid(row=4, column=1, padx=5, pady=5)
 
         # Botão para sair
-        self.botao_sair = tk.Button(self.janela, text="Sair", command=self.janela.destroy)
+        self.botao_sair = tk.Button(self.janela, text="Sair", command=self.janela.destroy, 
+                                    bg="#7A288A", fg="white", width=10, height=2)
         self.botao_sair.grid(row=5, column=0, columnspan=2, padx=5, pady=5)
 
     def somar(self):
